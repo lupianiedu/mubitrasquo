@@ -8,3 +8,5 @@ migrations/**
 # Ignore compiled files too
 **/*.pyc
 *.pyc
+
+static/icons
