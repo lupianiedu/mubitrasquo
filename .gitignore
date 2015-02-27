@@ -6,4 +6,5 @@ migrations/**
 .idea
 
 # Ignore compiled files too
+**/*.pyc
 *.pyc
