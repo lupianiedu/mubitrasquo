@@ -35,21 +35,21 @@
     <div class="header">
         <nav>
             <ul class="nav nav-pills pull-right">
-                {% if not registered %}
-                    <li role="presentation" class="active"><a href="/accounts/login/">Sign In</a></li>
-                    <li role="presentation"><a href="/accounts/register/">Sign Up</a></li>
+                {% if not user.is_authenticated %}
+                <li role="presentation" class="active"><a href="/accounts/login/">Sign In</a></li>
+                <li role="presentation"><a href="/accounts/register/">Sign Up</a></li>
                 {% else %}
-                    <li role="presentation" class="active"><a href="/accounts/login/">Manage calendar</a></li>
-                    <li role="presentation"><a href="/accounts/register/">My Profile</a></li>
+                <li role="presentation" class="active"><a href="/accounts/login/">Manage calendar</a></li>
+                <li role="presentation"><a href="/accounts/register/">My Profile</a></li>
                 {% endif %}
                 <li role="presentation"><a href="#">About</a></li>
                 <li role="presentation"><a href="#">Contact</a></li>
-                {% if registered %}
-                    <li role="presentation"><a href="/accounts/register/">My Profile</a></li>
+                {% if user.is_authenticated %}
+                    <li role="presentation"><a href="/accounts/logout/">Log out</a></li>
                 {% endif %}
             </ul>
         </nav>
-        <h3 class="text-muted">Project name</h3>
+        <h1 class="text-muted">MubiTrashquo<br/><small>Who is going to pay the next round?</small></h1>
     </div> <!-- end header -->
 </div>
 
